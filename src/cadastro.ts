@@ -4,6 +4,7 @@ let repasswordHTML = document.getElementById('repassword-cadastro') as HTMLInput
 
 let formularioCadastro = document.getElementById('formulario-cadastro') as HTMLFormElement;
 
+
 interface Livro {
     ISBN: string,
     titulo: string,
@@ -58,10 +59,10 @@ function cadastrarUsuario(){
     }
 
     listaUsuarios.push(novoUsuario)
+    salvarUsuarioStorage(listaUsuarios)
 
     alert("Conta criada com sucesso!");
     formularioCadastro.reset();
-    salvarUsuarioStorage(listaUsuarios)
 }
 
 function salvarUsuarioStorage(listaDados: Usuario[]): void{

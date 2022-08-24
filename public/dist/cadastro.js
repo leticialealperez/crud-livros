@@ -31,9 +31,9 @@ function cadastrarUsuario() {
         livros: []
     };
     listaUsuarios.push(novoUsuario);
+    salvarUsuarioStorage(listaUsuarios);
     alert("Conta criada com sucesso!");
     formularioCadastro.reset();
-    salvarUsuarioStorage(listaUsuarios);
 }
 function salvarUsuarioStorage(listaDados) {
     localStorage.setItem('usuarios', JSON.stringify(listaDados));
