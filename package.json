@@ -1,0 +1,17 @@
+{
+  "name": "crud-livros",
+  "version": "1.0.0",
+  "description": "sistema para cadastro, atualizacao e exclusao de livros",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Turma 8a edicao PS Starter",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
