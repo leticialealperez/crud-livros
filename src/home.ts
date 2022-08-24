@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let listaUsuarios = buscarTodosUsuarios();
 
-    dadosUsuarioLogado = listaUsuarios.find((usuario) => usuario.email === usuarioLogado)!
+    dadosUsuarioLogado = listaUsuarios.find((usuario) => usuario.email === usuarioLogado) as Usuario;
     console.log(dadosUsuarioLogado);
 })
 
