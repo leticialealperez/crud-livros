@@ -2,3 +2,16 @@ input{
     display: block;
     margin: 10px;
 }
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #DDD;
+}
+
+.registro:hover {background-color: #D6EEEE;}

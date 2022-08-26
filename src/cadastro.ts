@@ -33,6 +33,11 @@ formularioCadastro.addEventListener('submit', (event) => {
 
 function validarCampos(): Boolean {
 
+    if (passwordHTML.value.length < 10) {
+      alert('A senha é muito curta!');
+      return false;
+    }
+
     if(passwordHTML.value !== repasswordHTML.value){
         alert('Preencha os campos corretamente!');
         return false
@@ -43,7 +48,7 @@ function validarCampos(): Boolean {
 
 function cadastrarUsuario(){
 
-    let listaUsuarios: Usuario[] = buscarUsuariosStorage();
+    let listaUsuarios = buscarUsuariosStorage();
 
     let existe = listaUsuarios.some((usuario) => usuario.email === emailHTML.value)
 
@@ -63,6 +68,7 @@ function cadastrarUsuario(){
 
     alert("Conta criada com sucesso!");
     formularioCadastro.reset();
+    window.location.href = 'login.html';
 }
 
 function salvarUsuarioStorage(listaDados: Usuario[]): void{

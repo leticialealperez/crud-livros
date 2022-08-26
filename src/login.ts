@@ -16,7 +16,7 @@ formularioLogin.addEventListener('submit', (event) => {
 });
 
 function logar(): void{
-    let usuarios: Usuario[] = buscarUsuarios();
+    let usuarios = buscarUsuarios();
 
     let usuarioEncontrado = usuarios.find((usuario) => usuario.email === emailLogin.value && usuario.password === passwordLogin.value);
 

@@ -12,6 +12,10 @@ formularioCadastro.addEventListener('submit', (event) => {
     cadastrarUsuario();
 });
 function validarCampos() {
+    if (passwordHTML.value.length < 10) {
+        alert('A senha é muito curta!');
+        return false;
+    }
     if (passwordHTML.value !== repasswordHTML.value) {
         alert('Preencha os campos corretamente!');
         return false;
@@ -34,6 +38,7 @@ function cadastrarUsuario() {
     salvarUsuarioStorage(listaUsuarios);
     alert("Conta criada com sucesso!");
     formularioCadastro.reset();
+    window.location.href = 'login.html';
 }
 function salvarUsuarioStorage(listaDados) {
     localStorage.setItem('usuarios', JSON.stringify(listaDados));
